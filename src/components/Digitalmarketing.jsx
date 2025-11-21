@@ -16,7 +16,7 @@ const Digitalmarketing = () => {
 
         <p className="body-2 text-n-3 mx-[12rem] mb-[2rem]">
             <a href="#services" className="text-n-1 hover:text-color-1 transition">
-                 <span className="text-xl leading-none px-3">←</span>
+                 <span className="text-xl leading-none">←</span>
                 Back to Services
             </a>
         </p>
