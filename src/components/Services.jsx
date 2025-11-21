@@ -1,7 +1,7 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons ,brainwaveServices2} from "../constants";
+import { groodieServices, groodieServicesIcons ,groodieServices2} from "../constants";
 import {
   PhotoChatMessage,
   Gradient,
@@ -10,12 +10,10 @@ import {
 } from "./design/Services";
 import Button from "./Button";
 
-import Generating from "./Generating";
-
 const Services = () => {
   return (
-    <Section id="how-to-use">
-      <div className="container">
+    <Section id="services">
+      <div className="container pt-[10rem] -mt-[5.25rem]">
         <Heading
           tag="Ready to get started"
           title="Our Services"
@@ -41,7 +39,7 @@ const Services = () => {
                 From e-commerce platforms to custom web solutions, we create digital experiences that drive results.
               </p>
               <ul className="body-2">
-                {brainwaveServices.map((item, index) => (
+                {groodieServices.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
@@ -51,7 +49,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button href="/WebDevelopment" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="#webdev" white className="mt-5 w-full flex items-center justify-center">
                 Learn More
               </Button>
             </div>
@@ -75,7 +73,7 @@ const Services = () => {
                   Amplify your online presence with data-driven marketing strategies. 
                   From SEO to social media campaigns, we help you reach your audience and achieve measurable growth.
                 </p>
-                <Button href="/DigitalMarketing" white>
+                <Button href="#digitalmarketing" white>
                   Learn More
                 </Button>
               </div>
@@ -92,7 +90,7 @@ const Services = () => {
                 </p>
               
                 <ul className="flex items-center justify-between">
-                  {brainwaveServicesIcons.map((item, index) => (
+                  {groodieServicesIcons.map((item, index) => (
                     <li
                       key={index}
                       className={`rounded-2xl flex items-center justify-center ${
@@ -127,7 +125,7 @@ const Services = () => {
                 <VideoChatMessage />
                 <VideoBar />
               </div>
-              <Button href="/Graphicdesigning" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="#designing" white className="mt-5 w-full flex items-center justify-center">
                 Learn More
               </Button>
             </div>
@@ -151,7 +149,7 @@ const Services = () => {
                 From e-commerce platforms to custom web solutions, we create digital experiences that drive results.
               </p>
               <ul className="body-2">
-                {brainwaveServices2.map((item, index) => (
+                {groodieServices2.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
@@ -161,7 +159,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button href="/PenetrationTesting" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="#pentesting" white className="mt-5 w-full flex items-center justify-center">
                 Learn More
               </Button>
             </div>

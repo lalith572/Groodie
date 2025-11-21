@@ -60,14 +60,20 @@ export const navigation = [
   {
     id: "4",
     title: "Testimonials",
-    url: "#Testimonials",
+    url: "#testimonials",
     // onlyMobile: true,
   },
   {
     id: "5",
     title: "Contact Us",
-    url: "#contactus",
+    url: "#contact",
     onlyMobile: true,
+  },
+  {
+    id: "6",
+    title: "FAQ",
+    url: "#faq",
+    // onlyMobile: true,
   },
 ];
 
@@ -77,19 +83,19 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const brainwaveServices= [
+export const groodieServices= [
   "Custom web applications",
   "Responsive design",
   "API development"
 ];
 
-export const brainwaveServices2 = [
+export const groodieServices2 = [
   "Web Application Testing",
   "Vulnerability Assessment",
   "Network Security Audits & Consulting",
 ];
 
-export const brainwaveServicesIcons = [
+export const groodieServicesIcons = [
   recording03,
   recording01,
   disc02,
@@ -344,46 +350,260 @@ export const socials = [
 export const testimonials = [
   {
     id: 1,
-    text: `Brainwave has been a game-changer for my business. The AI chatbot helps me stay on top of industry trends and provides me with customized recommendations that help me make informed decisions. It's like having a personal assistant at my fingertips. I would highly recommend this app to any entrepreneur looking to improve their productivity and efficiency.`,
+    text: `Groodie has been a game-changer for my business. The AI chatbot helps me stay on top of industry trends and provides me with customized recommendations that help me make informed decisions. It's like having a personal assistant at my fingertips. I would highly recommend this app to any entrepreneur looking to improve their productivity and efficiency.`,
     name: "David Chen",
     role: "Entrepreneur",
     avatar: "https://i.pravatar.cc/100?img=1",
   },
   {
     id: 2,
-    text: `I was blown away by the accuracy and speed of the AI chatbot on Brainwave. It was able to understand my queries and provide relevant recommendations in seconds.`,
+    text: `I was blown away by the accuracy and speed of the AI chatbot on Groodie. It was able to understand my queries and provide relevant recommendations in seconds.`,
     name: "Dash",
     role: "Creative Director @ UIS",
     avatar: "https://i.pravatar.cc/100?img=2",
   },
   {
     id: 3,
-    text: `I have been using Brainwave for several months and have been impressed with its capabilities. The AI chatbot is able to understand complex queries and provide accurate recommendations, making my life easier and more productive. I would recommend this app to anyone looking for a reliable and efficient AI assistant.`,
+    text: `I have been using Groodie for several months and have been impressed with its capabilities. The AI chatbot is able to understand complex queries and provide accurate recommendations, making my life easier and more productive. I would recommend this app to anyone looking for a reliable and efficient AI assistant.`,
     name: "Michael Johnson",
     role: "Sales Executive",
     avatar: "https://i.pravatar.cc/100?img=3",
   },
   {
     id: 4,
-    text: `Brainwave has revolutionized the way I interact with digital assistants. The AI chatbot is able to understand my preferences and provide customized suggestions that are tailored to my needs. The app is user-friendly and intuitive, making it a joy to use.`,
+    text: `Groodie has revolutionized the way I interact with digital assistants. The AI chatbot is able to understand my preferences and provide customized suggestions that are tailored to my needs. The app is user-friendly and intuitive, making it a joy to use.`,
     name: "Michael Johnson",
     role: "Entrepreneur",
     avatar: "https://i.pravatar.cc/100?img=4",
   },
   {
     id: 5,
-    text: `Brainwave has been a game-changer for my business. The AI chatbot helps me stay on top of industry trends and provides me with customized recommendations that help me make more informed decisions. It's like having a personal assistant at my fingertips. I would highly recommend this app to any entrepreneur looking to improve their productivity and efficiency.`,
+    text: `Groodie has been a game-changer for my business. The AI chatbot helps me stay on top of industry trends and provides me with customized recommendations that help me make more informed decisions. It's like having a personal assistant at my fingertips. I would highly recommend this app to any entrepreneur looking to improve their productivity and efficiency.`,
     name: "Jane Smith",
     role: "UX Designer",
     avatar: "https://i.pravatar.cc/100?img=5",
   },
   {
     id: 6,
-    text: `Brainwave has been a game-changer for my business. The AI chatbot helps me stay on top of industry trends and provides me with customized recommendations that help me make informed decisions. It&apos;s like having a personal assistant at my
+    text: `Groodie has been a game-changer for my business. The AI chatbot helps me stay on top of industry trends and provides me with customized recommendations that help me make informed decisions. It&apos;s like having a personal assistant at my
                 fingertips. I would highly recommend this app to any entrepreneur looking to improve their productivity and
                 efficiency.`,
     name: "Maria Rodriguez",
     role: "Product Manager",
     avatar: "https://i.pravatar.cc/100?img=6",
+  },
+];
+
+
+export const faqItems = [
+  {
+    id: 0,
+    question: "What is Groodie – AI chat app?",
+    answer:
+      "Groodie is an AI-powered chat experience that helps you generate ideas, content, and answers in real time. It’s designed for both personal and professional productivity.",
+  },
+  {
+    id: 1,
+    question: "How does Groodie – AI chat app work?",
+    answer:
+      "You type a prompt or question and Groodie uses advanced language models to generate context-aware responses, suggestions, or actions tailored to your needs.",
+  },
+  {
+    id: 2,
+    question: "What are the core features of Groodie?",
+    answer:
+      "Core features include natural language chat, content generation, code assistance, brainstorming, and integrations with your existing tools and workflows.",
+  },
+  {
+    id: 3,
+    question: "How much does Groodie cost?",
+    answer:
+      "Groodie offers multiple plans, from a free tier for getting started to paid tiers with higher limits and advanced capabilities for teams and power users.",
+  },
+  {
+    id: 4,
+    question: "How can I get started with Groodie?",
+    answer:
+      "Simply sign up, create your workspace, and start chatting with the AI. You can customize settings and prompts to better match your use cases.",
+  },
+];
+
+export const Webdetails = [
+  {
+    id: "1",
+    title: "Discovery & Planning",
+    text: "we start by understanding your business goals, target audience, and project requirements to create a tailored development plan.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "2",
+    title: "Design & Prototyping",
+    text: "Creating wireframes and interactive prototypes to visualize the user experience and interface design before development begins.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    // iconUrl: benefitIcon2,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "3",
+    title: "Devlopment",
+    text: "Building scalable, secure, and high-performance web applications using the latest technologies and best practices.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    // iconUrl: benefitIcon3,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "4",
+    title: "Testing & Quality Assurance",
+    text: "Rigorous testing to ensure functionality, performance, and security standards are met before launch.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    // iconUrl: benefitIcon4,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "5",
+    title: "Deployment & Maintenance",
+    text: "Launching your web application and providing ongoing support, updates, and optimizations to ensure long-term success.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+];
+
+export const pentestingdetails = [
+  {
+    id: "1",
+    title: "Scoping",
+    text: "We begin by defining the scope of the penetration test, identifying target systems, and understanding your security objectives.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "2",
+    title: "Reconnaissance",
+    text: "Gathering information about the target systems using both passive and active techniques to identify potential vulnerabilities.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    // iconUrl: benefitIcon2,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "3",
+    title: "Vulnerability Analysis",
+    text: "Identifying and analyzing vulnerabilities in the target systems using automated tools and manual techniques.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    // iconUrl: benefitIcon3,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "4",
+    title: "Exploitation",
+    text: "Attempting to exploit identified vulnerabilities to assess their potential impact and the effectiveness of existing security controls.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    // iconUrl: benefitIcon4,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "5",
+    title: "Reporting & Remediation",
+    text: "Providing a detailed report of findings, including risk assessments and recommendations for remediation to enhance your security posture.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+];
+
+export const marketingdetails = [
+  {
+    id: "1",
+    title: "Strategy Development",
+    text: "We begin by understanding your business goals and target audience to create a customized digital marketing strategy.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "2",
+    title: "Campaign Setup",
+    text: "Setting up targeted campaigns across various digital channels, including social media, search engines, and email marketing.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    // iconUrl: benefitIcon2,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "3",
+    title: "Content Creation",
+    text: "Developing engaging and relevant content that resonates with your audience and drives conversions.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    // iconUrl: benefitIcon3,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "4",
+    title: "Launch & Optimization",
+    text: "Launching campaigns and continuously monitoring performance to optimize for better results and ROI.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    // iconUrl: benefitIcon4,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "5",
+    title: "Reporting & Analysis",
+    text: "Providing detailed reports on campaign performance, insights, and recommendations for future strategies.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+];
+
+export const designdetails = [
+  {
+    id: "1",
+    title: "Brand Discovery",
+    text: "Understanding your brand values, target audience, and market positioning to inform the design process.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "2",
+    title: "Creative Conceptualization",
+    text: "Brainstorming and developing creative concepts that align with your brand identity and resonate with your audience.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    // iconUrl: benefitIcon2,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "3",
+    title: "Design Execution",
+    text: "Bringing concepts to life through compelling visual designs, including logos, marketing materials, and digital assets.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    // iconUrl: benefitIcon3,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "4",
+    title: "Review & Refinement",
+    text: "Collaborating with you to review designs and make necessary refinements to ensure the final product meets your expectations.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    // iconUrl: benefitIcon4,
+    // imageUrl: benefitImage2,
+    // light: true,
+  },
+  {
+    id: "5",
+    title: "Delivery & Support",
+    text: "Delivering final design assets in various formats and providing ongoing support for brand consistency across all platforms.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
   },
 ];

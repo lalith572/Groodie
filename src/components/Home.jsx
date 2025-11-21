@@ -9,7 +9,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 
-const Hero = () => {
+const Home = () => {
   const parallaxRef = useRef(null);
 
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
-      id="hero"
+      id="home"
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
@@ -39,7 +39,7 @@ const Hero = () => {
             We deliver world-class Freelance Services to elevate your business.<br />
             "From concept to code — we make it happen"
           </p>
-          <Button href="/pricing" white>
+          <Button href="#contact" white>
             Get started
           </Button>
         </div>
@@ -101,4 +101,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

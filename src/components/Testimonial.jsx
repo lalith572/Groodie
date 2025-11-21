@@ -36,7 +36,7 @@ const Testimonial = () => {
     <Section className="py-16 md:py-24 lg:py-32"
     crosses
     crossesOffset="lg:translate-y-[5.25rem]"
-    id="testimonial"
+    id="testimonials"
     >
       
       <div className="container">

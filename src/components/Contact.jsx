@@ -6,9 +6,9 @@ import Button from "./Button";
 const Contact = () => {
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem]"
+      className="pt-[10rem] -mt-[5.25rem]"
       crosses
-      crossesOffset="lg:translate-y-[7.25rem]"
+      crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
       id="contact">
 
@@ -39,10 +39,10 @@ const Contact = () => {
                   <div>
                     <p className="text-n-3">Email</p>
                     <a
-                      href="mailto:hello@groodie.in"
+                      href="mailto:support@groodie.in"
                       className="text-n-1 hover:text-color-1 transition"
                     >
-                      hello@groodie.in
+                      support@groodie.in
                     </a>
                   </div>
                 </li>
@@ -57,7 +57,7 @@ const Contact = () => {
                       href="tel:+919876543210"
                       className="text-n-1 hover:text-color-1 transition"
                     >
-                      +91 98765 43210
+                      +91 94454 11084
                     </a>
                   </div>
                 </li>
@@ -69,7 +69,7 @@ const Contact = () => {
                   <div>
                     <p className="text-n-3">Office</p>
                     <p className="text-n-1">
-                      Chennai – 600004.
+                      Kalpakkam – 603012.
                     </p>
                   </div>
                 </li>
@@ -95,7 +95,7 @@ const Contact = () => {
                 <input
                   id="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Your full name"
                   className="w-full rounded-2xl bg-n-8 border border-n-6 px-4 py-3 body-2 text-n-1 placeholder:text-n-4 focus:outline-none focus:border-color-1 focus:ring-1 focus:ring-color-1"
                 />
               </div>
@@ -170,7 +170,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <Button href="/PenetrationTesting" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="#home" white className="mt-5 w-full flex items-center justify-center">
                 Send message
               </Button>
             </form>

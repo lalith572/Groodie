@@ -9,7 +9,7 @@ import Values from "./Values";
 const AboutUs = () => {
   return (
     <Section 
-    className="pt-[12rem] -mt-[5.25rem]"
+    className="pt-[10rem] -mt-[5.25rem]"
     crosses
     crossesOffset="lg:translate-y-[5.25rem]"
     customPaddings
@@ -41,7 +41,7 @@ const AboutUs = () => {
             ))}
           </ul>
 
-          <Button>Get Groodified</Button>
+          <Button href="#contact">Get Groodified</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">

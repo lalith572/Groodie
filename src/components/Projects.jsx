@@ -11,7 +11,7 @@ const Projects = () => (
   className="overflow-hidden" 
   crosses
   crossesOffset="lg:translate-y-[5.25rem]"
-  id="roadmap">
+  id="projects">
     <div className="container md:pb-10">
       <Heading 
       tag="Ready to get Amazed" 

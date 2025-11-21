@@ -37,7 +37,7 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
+        <a className="block w-[12rem] xl:mr-8" href="#home">
           {/* <img src="./assets/logo.jpg" width={190} height={40} alt="Groodie" /> */}
           <p>Groodie</p>
         </a>
@@ -75,7 +75,7 @@ const Header = () => {
         >
           New account
         </a> */}
-        <Button className="hidden lg:flex" href="#login">
+        <Button className="hidden lg:flex" href="#contact">
           Get Groodiefied
         </Button>
 
