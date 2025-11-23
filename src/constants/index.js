@@ -42,40 +42,40 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "Services",
-    url: "#services",
+    title: "Home",
+    url: "/home",
   },
   {
     id: "1",
-    title: "About Us",
-    url: "#about",
+    title: "Services",
+    url: "/services",
   },
   {
     id: "2",
-    title: "Projects",
-    url: "#projects",
+    title: "About Us",
+    url: "/about",
   },
   {
     id: "3",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Projects",
+    url: "/projects",
   },
   {
     id: "4",
     title: "Testimonials",
-    url: "#testimonials",
+    url: "/testimonials",
     // onlyMobile: true,
   },
   {
     id: "5",
     title: "Contact Us",
-    url: "#contact",
+    url: "/contact",
     onlyMobile: true,
   },
   {
     id: "6",
     title: "FAQ",
-    url: "#faq",
+    url: "/faq",
     // onlyMobile: true,
   },
 ];

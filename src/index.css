@@ -95,3 +95,15 @@
   @apply rotate-[-360deg]
 }
 
+.swal2-styled.swal2-confirm {
+  background-color: #AC6AFF !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 10px 20px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.swal2-styled.swal2-confirm:hover {
+  background-color: #9a55e6 !important;
+}

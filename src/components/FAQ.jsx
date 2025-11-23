@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import Section from "./Section";
 import { faqItems } from "../constants";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <Section
-      id="faq"
-      className="pt-[10rem] lg:pt-[12rem]"
+      className="pt-[10rem] -mt-[5.25rem]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
-    >
+      id="faq">
+
       <div className="container grid gap-10 mb-[5.5rem] mt-[2rem] lg:gap-16 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] ">
         <div>
           <h2 className="h1 mb-6">Frequently asked questions</h2>
@@ -24,12 +25,11 @@ const FAQ = () => {
 
           <p className="body-2 text-n-3">
             Haven’t found what you’re looking for?{" "}
-            <a
-              href="#contact"
-              className="text-n-1 hover:text-color-1 transition"
-            >
+            <Link
+              to="/contact"
+              className="text-n-1 hover:text-color-1 transition">
               Contact us
-            </a>
+            </Link>
           </p>
         </div>
 

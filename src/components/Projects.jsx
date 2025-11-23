@@ -8,11 +8,12 @@ import { Gradient } from "./design/Roadmap";
 
 const Projects = () => (
   <Section 
-  className="overflow-hidden" 
-  crosses
-  crossesOffset="lg:translate-y-[5.25rem]"
-  id="projects">
-    <div className="container md:pb-10">
+    className="pt-[10rem] -mt-[5.25rem]"
+    crosses
+    crossesOffset="lg:translate-y-[5.25rem]"
+    customPaddings
+    id="projects">
+    <div className="container">
       <Heading 
       tag="Ready to get Amazed" 
       title="Featured Projects"
@@ -75,8 +76,8 @@ const Projects = () => (
         <Gradient />
       </div>
 
-      <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/roadmap">Our Projects</Button>
+      <div className="flex justify-center my-12 md:mt-15 xl:mt-20">
+        <Button>Our Projects</Button>
       </div>
     </div>
   </Section>

@@ -39,7 +39,7 @@ const Home = () => {
             We deliver world-class Freelance Services to elevate your business.<br />
             "From concept to code — we make it happen"
           </p>
-          <Button href="#contact" white>
+          <Button href="/contact" white>
             Get started
           </Button>
         </div>

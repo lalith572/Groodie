@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "./Heading";
 import Section from "./Section";
 import { testimonials } from "../constants";
-import { Gradient, Gradient2 } from "./design/Services";
+import { Gradient } from "./design/Services";
 
 const Testimonial = () => {
   const col1 = testimonials.filter((_, i) => i % 3 === 0);
@@ -33,13 +33,14 @@ const Testimonial = () => {
   );
 
   return (
-    <Section className="py-16 md:py-24 lg:py-32"
-    crosses
-    crossesOffset="lg:translate-y-[5.25rem]"
-    id="testimonials"
-    >
+    <Section 
+      className="pt-[10rem] -mt-[5.25rem]"
+      crosses
+      crossesOffset="lg:translate-y-[5.25rem]"
+      customPaddings
+      id="testimonials">
       
-      <div className="container">
+      <div className="container mb-[1rem]">
         <Heading
           tag="Ready to get hear"
           title="What our clients say"
@@ -65,7 +66,6 @@ const Testimonial = () => {
         </div>
       </div>
       <Gradient />
-      {/* <Gradient2 /> */}
     </Section>
     
   );

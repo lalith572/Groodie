@@ -4,21 +4,24 @@ import Button from './Button'
 import Section from './Section'
 import Heading from './Heading'
 import Pricing from './Pricing'
+import Arrow from '../assets/svg/Arrow'
+import { Link } from 'react-router-dom'
 
 const Designing = () => {
   return (
     <Section 
-    className="pt-[20rem] -mt-[5.25rem]"
+    className="pt-[10rem] -mt-[5.25rem]"
     crosses
-    crossesOffset="lg:translate-y-[7.25rem]"
+    crossesOffset="lg:translate-y-[5.25rem]"
     customPaddings
     id="designing">
 
-        <p className="body-2 text-n-3 mx-[12rem] mb-[2rem]">
-            <a href="#services" className="text-n-1 hover:text-color-1 transition">
-                 <span className="text-xl leading-none px-3">←</span>
+        <p className="body-2 text-n-3 mx-[10rem] mb-[2rem]">
+            <Link to="/services" className="inline-flex text-n-1 hover:text-color-1 transition">
+                 {/* <span className="text-xl leading-none ">←</span> */}
+                <Arrow />
                 Back to Services
-            </a>
+            </Link>
         </p>
       <div className="container lg:flex">
         <div >
@@ -32,7 +35,7 @@ const Designing = () => {
                 Every design tells a story.
             </p>
 
-            <Button white href="#contact">Get a Quote</Button>
+            <Button white href="/contact">Get a Quote</Button>
         </div>
       </div>
       {/* Our process */}

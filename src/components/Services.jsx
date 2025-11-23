@@ -12,8 +12,13 @@ import Button from "./Button";
 
 const Services = () => {
   return (
-    <Section id="services">
-      <div className="container pt-[10rem] -mt-[5.25rem]">
+    <Section 
+    className="pt-[10rem] -mt-[5.25rem]"
+    crosses
+    crossesOffset="lg:translate-y-[5.25rem]"
+    customPaddings
+    id="services">
+      <div className="container">
         <Heading
           tag="Ready to get started"
           title="Our Services"
@@ -49,7 +54,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button href="#webdev" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="/webdev" white className="mt-5 w-full flex items-center justify-center">
                 Learn More
               </Button>
             </div>
@@ -73,7 +78,7 @@ const Services = () => {
                   Amplify your online presence with data-driven marketing strategies. 
                   From SEO to social media campaigns, we help you reach your audience and achieve measurable growth.
                 </p>
-                <Button href="#digitalmarketing" white>
+                <Button href="/digitalmarketing" white>
                   Learn More
                 </Button>
               </div>
@@ -125,7 +130,7 @@ const Services = () => {
                 <VideoChatMessage />
                 <VideoBar />
               </div>
-              <Button href="#designing" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="/designing" white className="mt-5 w-full flex items-center justify-center">
                 Learn More
               </Button>
             </div>
@@ -159,7 +164,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button href="#pentesting" white className="mt-5 w-full flex items-center justify-center">
+              <Button href="/pentesting" white className="mt-5 w-full flex items-center justify-center">
                 Learn More
               </Button>
             </div>

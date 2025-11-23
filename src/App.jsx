@@ -13,24 +13,28 @@ import Webdev from "./components/Webdev";
 import Pentesting from "./components/Pentesting";
 import Digitalmarketing from "./components/Digitalmarketing";
 import Designing from "./components/Designing";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
-        <Home />
-        <Services />
-        <AboutUs />
-        <Projects />
-        <Pricing />
-        <Testimonial/>
-        <FAQ />
-        <Webdev />
-        <Pentesting />
-        <Digitalmarketing />
-        <Designing />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/testimonials" element={<Testimonial />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/webdev" element={<Webdev />} />
+          <Route path="/pentesting" element={<Pentesting />} />
+          <Route path="/digitalmarketing" element={<Digitalmarketing />} />
+          <Route path="/designing" element={<Designing />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
         <Footer />
       </div>
 

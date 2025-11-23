@@ -4,21 +4,22 @@ import Section from "./Section";
 import Heading from "./Heading";
 import { Webdetails } from "../constants";
 import Pricing from "./Pricing";
+import { Link } from "react-router-dom";
 
 const Webdev = () => {
   return (
     <Section 
-    className="pt-[20rem] -mt-[5.25rem]"
+    className="pt-[10rem] -mt-[5.25rem]"
     crosses
-    crossesOffset="lg:translate-y-[7.25rem]"
+    crossesOffset="lg:translate-y-[5.25rem]"
     customPaddings
     id="webdev">
 
         <p className="body-2 text-n-3 mx-[12rem] mb-[2rem]">
-            <a href="#services" className="text-n-1 hover:text-color-1 transition">
+            <Link to="/services" className="text-n-1 hover:text-color-1 transition">
                  <span className="text-xl leading-none px-3">←</span>
                 Back to Services
-            </a>
+            </Link>
         </p>
       <div className="container lg:flex">
         <div >
@@ -30,7 +31,7 @@ const Webdev = () => {
             <p className="body-1 mb-[2rem] mt-[2rem]">We create modern, scalable, and performant web applications that drive business growth.
                 From concept to deployment, our development process ensures quality at every step.</p>
 
-            <Button white href="#contact">Get a Quote</Button>
+            <Button white href="/contact">Get a Quote</Button>
         </div>
       </div>
       {/* Our process */}
