@@ -4,6 +4,7 @@ import Section from './Section'
 import Heading from './Heading'
 import Pricing from './Pricing'
 import { marketingdetails } from '../constants'
+import { Link } from 'react-router-dom'
 
 const Digitalmarketing = () => {
   return (
@@ -15,10 +16,10 @@ const Digitalmarketing = () => {
     id="digitalmarketing">
 
         <p className="body-2 text-n-3 mx-[12rem] mb-[2rem]">
-            <a href="/services" className="text-n-1 hover:text-color-1 transition">
+            <Link to="/services" className="text-n-1 hover:text-color-1 transition">
                  <span className="text-xl leading-none px-3">←</span>
                 Back to Services
-            </a>
+            </Link>
         </p>
       <div className="container lg:flex">
         <div >

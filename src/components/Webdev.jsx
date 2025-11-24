@@ -4,6 +4,7 @@ import Section from "./Section";
 import Heading from "./Heading";
 import { Webdetails } from "../constants";
 import Pricing from "./Pricing";
+import { Link } from "react-router-dom";
 
 const Webdev = () => {
   return (
@@ -15,10 +16,10 @@ const Webdev = () => {
     id="webdev">
 
         <p className="body-2 text-n-3 mx-[12rem] mb-[2rem]">
-            <a href="/services" className="text-n-1 hover:text-color-1 transition">
+            <Link to="/services" className="text-n-1 hover:text-color-1 transition">
                  <span className="text-xl leading-none px-3">←</span>
                 Back to Services
-            </a>
+            </Link>
         </p>
       <div className="container lg:flex">
         <div >

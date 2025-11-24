@@ -14,12 +14,14 @@ import Pentesting from "./components/Pentesting";
 import Digitalmarketing from "./components/Digitalmarketing";
 import Designing from "./components/Designing";
 import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

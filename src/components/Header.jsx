@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 // import { brainwave } from "../assets";
@@ -38,10 +38,10 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="/home">
+        <Link className="block w-[12rem] xl:mr-8 hover:scale-105" to="/home">
           <img src={logo} width={190} height={40} alt="Groodie" />
           {/* <p>Groodie</p> */}
-        </a>
+        </Link>
 
         <nav
           className={`${
@@ -50,9 +50,9 @@ const Header = () => {
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
-              <a
+              <NavLink
                 key={item.id}
-                href={item.url}
+                to={item.url}
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
@@ -63,7 +63,7 @@ const Header = () => {
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {item.title}
-              </a>
+              </NavLink>
             ))}
           </div>
 
