@@ -15,7 +15,7 @@ const Digitalmarketing = () => {
     customPaddings
     id="digitalmarketing">
 
-        <p className="body-2 text-n-3 mx-[12rem] mb-[2rem]">
+        <p className="body-2 text-n-3 mx-[6rem] mb-[2rem]">
             <Link to="/services" className="text-n-1 hover:text-color-1 transition">
                  <span className="text-xl leading-none px-3">←</span>
                 Back to Services
