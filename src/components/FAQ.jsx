@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Section from "./Section";
 import { faqItems } from "../constants";
-import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -25,11 +24,11 @@ const FAQ = () => {
 
           <p className="body-2 text-n-3">
             Haven’t found what you’re looking for?{" "}
-            <Link
-              to="/contact"
+            <a
+              href="/contact"
               className="text-n-1 hover:text-color-1 transition">
               Contact us
-            </Link>
+            </a>
           </p>
         </div>
 
