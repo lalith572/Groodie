@@ -8,7 +8,6 @@ const Pricing = () => {
   return (
     <Section 
     className="overflow-hidden"
-    // crosses
     crossesOffset="lg:translate-y-[5.25rem]"
     id="pricing">
       
@@ -43,18 +42,6 @@ const Pricing = () => {
           <LeftLine />
           <RightLine />
         </div>
-
-        {/* <div className="flex justify-center mt-10">
-          <p className="text-xs font-code font-bold tracking-wider uppercase">Need a custom solution?  </p>
-          <a
-            className="text-xs font-code font-bold tracking-wider uppercase border-b px-2 border-color-1 hover:text-color-1 transition-colors"
-            href="/pricing"
-          > */}
-            {/* See the full details */}
-            {/* Contact us 
-          </a>
-          <p className="text-xs font-code font-bold tracking-wider uppercase">for a personalized quote.</p>
-        </div> */}
       </div>
     </Section>
   );

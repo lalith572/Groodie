@@ -8,9 +8,29 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Home = () => {
   const parallaxRef = useRef(null);
+  const titleRef = useRef(null);
+  const paraRef = useRef(null);
+  const btnRef = useRef(null);
+
+  useGSAP(() => {
+    
+    gsap.from([titleRef.current, paraRef.current, btnRef.current], {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out",
+      stagger: {
+        amount: 0.6,   
+        from: "start",
+      }
+    })
+
+  }, []);
 
   return (
     <Section
@@ -22,8 +42,9 @@ const Home = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
-            Transform Your Digital Vision with {` `}
+
+          <h1 ref={titleRef} className="h1 mb-6">
+            Transform Your Digital Vision with{" "}
             <span className="inline-block relative">
               Groodie{" "}
               <img
@@ -35,14 +56,22 @@ const Home = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            We deliver world-class Freelance Services to elevate your business.<br />
+
+          <p
+            ref={paraRef}
+            className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8"
+          >
+            We deliver world-class Freelance Services to elevate your business.
+            <br />
             "From concept to code — we make it happen"
           </p>
-          <Button href="/contact" white>
+
+          <Button ref={btnRef} href="/contact" white>
             Get started
           </Button>
+
         </div>
+
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
@@ -75,19 +104,15 @@ const Home = () => {
                     title="Code. Create. Connect."
                   />
                 </ScrollParallax>
+
               </div>
             </div>
 
             <Gradient />
           </div>
+
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
-            <img
-              src={heroBackground}
-              className="w-full"
-              width={1440}
-              height={1800}
-              alt="hero"
-            />
+            <img src={heroBackground} className="w-full" alt="hero" />
           </div>
 
           <BackgroundCircles />

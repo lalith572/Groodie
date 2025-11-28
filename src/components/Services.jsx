@@ -1,118 +1,183 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
-import { groodieServices, groodieServicesIcons ,groodieServices2} from "../constants";
-import {
-  PhotoChatMessage,
-  Gradient,
-  VideoBar,
-  VideoChatMessage,
-} from "./design/Services";
+import { groodieServices, groodieServicesIcons, groodieServices2 } from "../constants";
+import { PhotoChatMessage, Gradient, VideoBar, VideoChatMessage } from "./design/Services";
 import Button from "./Button";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
+  const titleRef = useRef(null);
+  const cardRefs = useRef([]);
+  const titleRefs = useRef([]);
+  const bodyRefs = useRef([]);
+  const listRefs = useRef([]);
+  const buttonRefs = useRef([]);
+
+  const addCardRef = (el) => el && !cardRefs.current.includes(el) && cardRefs.current.push(el);
+  const addTitleRef = (el) => el && titleRefs.current.push(el);
+  const addBodyRef = (el) => el && bodyRefs.current.push(el);
+  const addListRef = (el) => el && listRefs.current.push(el);
+  const addButtonRef = (el) => el && buttonRefs.current.push(el);
+
+  useGSAP(() => {
+    gsap.from(titleRef.current, {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    cardRefs.current.forEach((card, index) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+        },
+      });
+
+      tl.from(card, {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        delay: index * 0.1,
+        ease: "power3.Out",
+      });
+
+      tl.from(titleRefs.current[index], {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+      }, "-=0.4");
+
+      tl.from(bodyRefs.current[index], {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+      }, "-=0.35");
+
+      tl.from(listRefs.current[index], {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+      }, "-=0.3");
+
+      tl.from(buttonRefs.current[index], {
+        opacity: 0,
+        y: 15,
+        duration: 0.5,
+      }, "-=0.25");
+    });
+  }, []);
+
   return (
-    <Section 
-    className="pt-[10rem] -mt-[5.25rem]"
-    crosses
-    crossesOffset="lg:translate-y-[5.25rem]"
-    customPaddings
-    id="services">
+    <Section
+      className="pt-[10rem] -mt-[5.25rem]"
+      crosses
+      crossesOffset="lg:translate-y-[5.25rem]"
+      customPaddings
+      id="services"
+    >
       <div className="container">
         <Heading
+          ref={titleRef}
           tag="Ready to get started"
           title="Our Services"
           text="We offer a full spectrum of freelance services to help your business thrive in the digital age"
         />
 
         <div className="relative">
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
+          <div
+            ref={addCardRef}
+            className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
+          >
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
                 className="w-full h-full object-cover md:object-right"
-                width={800}
-                alt="Smartest AI"
-                height={730}
                 src={service1}
+                alt="service"
               />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Web Development</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                Build powerful, responsive websites and web applications with cutting-edge technologies. 
-                From e-commerce platforms to custom web solutions, we create digital experiences that drive results.
+              <h4 ref={addTitleRef} className="h4 mb-4">Web Development</h4>
+
+              <p ref={addBodyRef} className="body-2 mb-[3rem] text-n-3">
+                Build powerful websites and applications with modern technologies.
               </p>
-              <ul className="body-2">
-                {groodieServices.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start py-4 border-t border-n-6"
-                  >
+
+              <ul ref={addListRef} className="body-2">
+                {groodieServices.map((item, i) => (
+                  <li key={i} className="flex items-start py-4 border-t border-n-6">
                     <img width={24} height={24} src={check} />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
               </ul>
-              <Button href="/webdev" white className="mt-5 w-full flex items-center justify-center">
+
+              <Button
+                ref={addButtonRef}
+                href="/webdev"
+                white
+                className="mt-5 w-full flex items-center justify-center"
+              >
                 Learn More
               </Button>
             </div>
-            {/* <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" /> */}
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
+            <div
+              ref={addCardRef}
+              className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden"
+            >
               <div className="absolute inset-0">
                 <img
                   src={service2}
-                  className="h-full w-full object-cover"
-                  width={630}
-                  height={750}
-                  alt="robot"
+                  className="w-full h-full object-cover"
+                  alt="service"
                 />
               </div>
+
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Digital Marketing</h4>
-                <p className="body-2 mb-[3rem] text-n-3">
-                  Amplify your online presence with data-driven marketing strategies. 
-                  From SEO to social media campaigns, we help you reach your audience and achieve measurable growth.
+                <h4 ref={addTitleRef} className="h4 mb-4">Digital Marketing</h4>
+
+                <p ref={addBodyRef} className="body-2 mb-[3rem] text-n-3">
+                  Boost your brand visibility with powerful digital strategies.
                 </p>
-                <Button href="/digitalmarketing" white>
+
+                <Button
+                  ref={addButtonRef}
+                  href="/digitalmarketing"
+                  white
+                >
                   Learn More
                 </Button>
               </div>
-              
+
               <PhotoChatMessage />
             </div>
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div
+              ref={addCardRef}
+              className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]"
+            >
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Graphic Design</h4>
-                <p className="body-2 mb-[2rem] text-n-3">
-                  Elevate your brand with stunning visual identities, logos, and marketing materials. 
-                  Our creative team brings your vision to life with pixel-perfect designs that captivate and convert.
+                <h4 ref={addTitleRef} className="h4 mb-4">Graphic Design</h4>
+
+                <p ref={addBodyRef} className="body-2 mb-[2rem] text-n-3">
+                  Elevate your brand with stunning visual designs.
                 </p>
-              
-                <ul className="flex items-center justify-between">
-                  {groodieServicesIcons.map((item, index) => (
-                    <li
-                      key={index}
-                      className={`rounded-2xl flex items-center justify-center ${
-                        index === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
-                      }`}
-                    >
-                      <div
-                        className={
-                          index === 2
-                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
-                            : ""
-                        }
-                      >
-                        <img src={item} width={24} height={24} alt={item} />
-                      </div>
+
+                <ul ref={addListRef} className="flex items-center justify-between">
+                  {groodieServicesIcons.map((icon, i) => (
+                    <li key={i} className="rounded-2xl">
+                      <img src={icon} width={40} alt="" />
                     </li>
                   ))}
                 </ul>
@@ -122,49 +187,53 @@ const Services = () => {
                 <img
                   src={service3}
                   className="w-full h-full object-cover"
-                  width={520}
-                  height={400}
-                  alt="Scary robot"
                 />
 
                 <VideoChatMessage />
                 <VideoBar />
               </div>
-              <Button href="/designing" white className="mt-5 w-full flex items-center justify-center">
+
+              <Button
+                ref={addButtonRef}
+                href="/designing"
+                white
+                className="mt-5 w-full"
+              >
                 Learn More
               </Button>
             </div>
           </div>
 
-          <div className="relative z-1 flex items-center h-[39rem] mt-5 mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
+          <div
+            ref={addCardRef}
+            className="relative z-1 flex items-center h-[39rem] mt-5 mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
+          >
             <div className="absolute top-0 right-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
-              <img
-                className="w-full h-full object-cover md:object-left"
-                width={800}
-                alt="Smartest AI"
-                height={730}
-                src={service1}
-              />
+              <img className="w-full h-full object-cover" src={service1} />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-right">
-              <h4 className="h4 mb-4">Penetration Testing</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                Build powerful, responsive websites and web applications with cutting-edge technologies. 
-                From e-commerce platforms to custom web solutions, we create digital experiences that drive results.
+              <h4 ref={addTitleRef} className="h4 mb-4">Penetration Testing</h4>
+
+              <p ref={addBodyRef} className="body-2 mb-[3rem] text-n-3">
+                Secure your digital assets with expert security testing.
               </p>
-              <ul className="body-2">
-                {groodieServices2.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start py-4 border-t border-n-6"
-                  >
-                    <img width={24} height={24} src={check} />
+
+              <ul ref={addListRef} className="body-2">
+                {groodieServices2.map((item, i) => (
+                  <li key={i} className="flex items-start py-4 border-t border-n-6">
+                    <img width={24} src={check} />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
               </ul>
-              <Button href="/pentesting" white className="mt-5 w-full flex items-center justify-center">
+
+              <Button
+                ref={addButtonRef}
+                href="/pentesting"
+                white
+                className="mt-5 w-full"
+              >
                 Learn More
               </Button>
             </div>

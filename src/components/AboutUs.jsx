@@ -5,8 +5,33 @@ import Section from "./Section";
 import Heading from "./Heading";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import Values from "./Values";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 const AboutUs = () => {
+
+  const titleRef = useRef(null);
+  const headRef = useRef(null);
+  const listRef = useRef(null);
+  const aboutRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  useGSAP(() => {
+ 
+    gsap.from([titleRef.current, headRef.current, aboutRef.current, listRef.current,buttonRef.current], {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: "power3.out",
+      stagger: {
+        amount: 0.8,  
+        from: "start", 
+      }
+    });
+
+  }, []);
+
   return (
     <Section 
     className="pt-[10rem] -mt-[5.25rem]"
@@ -16,6 +41,7 @@ const AboutUs = () => {
     id="about">
 
       <Heading
+          ref={titleRef}
           tag="Get started To Know Us"
           title="About Groodie"
           className="mb-10 md:mb-16 lg:mb-24 md:max-w-lg lg:max-w-2xl"
@@ -23,11 +49,11 @@ const AboutUs = () => {
 
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
-          <h2 className="h2 mb-4 md:mb-8">
+          <h2 ref={headRef} className="h2 mb-4 md:mb-8">
             Building Digital Excellence Together
           </h2>
 
-          <ul className="max-w-[22rem] mb-10 md:mb-14">
+          <ul ref={listRef} className="max-w-[22rem] mb-10 md:mb-14">
             {aboutContent.map((item) => (
               <li className="mb-3 py-3" key={item.id}>
                 <div className="flex items-center">
@@ -41,11 +67,11 @@ const AboutUs = () => {
             ))}
           </ul>
 
-          <Button href="/contact">Get Groodified</Button>
+          <Button ref={buttonRef} href="/contact">Get Groodified</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-1 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+          <p ref={aboutRef} className="body-1 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
             {aboutText}
           </p>
 

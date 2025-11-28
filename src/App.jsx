@@ -13,7 +13,7 @@ import Webdev from "./components/Webdev";
 import Pentesting from "./components/Pentesting";
 import Digitalmarketing from "./components/Digitalmarketing";
 import Designing from "./components/Designing";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate} from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         <Header />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />

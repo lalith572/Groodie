@@ -1,13 +1,76 @@
-import React from 'react'
 import { designdetails } from '../constants'
 import Button from './Button'
 import Section from './Section'
 import Heading from './Heading'
 import Pricing from './Pricing'
-import Arrow from '../assets/svg/Arrow'
 import { Link } from 'react-router-dom'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from 'react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Designing = () => {
+
+  const titleRef = useRef(null);
+  const title2Ref = useRef(null);
+  const textRef = useRef(null);
+  const buttonRef = useRef(null);
+  const backRef = useRef(null);
+  const tagRef = useRef(null);
+  const cardRefs = useRef([]);
+  const titleRefs = useRef([]);
+  const textRefs = useRef([]);
+
+  const addCardRef = (el) => el && !cardRefs.current.includes(el) && cardRefs.current.push(el);
+  const addTitleRef = (el) => el && titleRefs.current.push(el);
+  const addTextRef = (el) => el && textRefs.current.push(el);
+
+  useGSAP(() => {
+    
+    gsap.from([backRef.current, tagRef.current, titleRef.current, textRef.current,buttonRef.current, title2Ref.current], {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: "power3.out",
+      stagger: {
+        amount: 1,  
+        from: "start", 
+      }
+    });
+
+    cardRefs.current.forEach((card, i) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+        },
+      });
+
+      tl.from(card, {
+        opacity: 0,
+        rotateY: 90,       
+        transformOrigin: "left center",
+        duration: 1,
+        ease: "power3.out",
+        delay: i * 0.25,     
+      });
+   
+      tl.from(titleRefs.current[i], {
+          opacity: 0,
+          y: 20,
+          duration: 0.5,
+        }, "-=0.4");
+
+        tl.from(textRefs.current[i], {
+          opacity: 0,
+          y: 20,
+          duration: 0.5,
+        }, "-=0.35");
+      });
+  }, []);
+
   return (
     <Section 
     className="pt-[10rem] -mt-[5.25rem]"
@@ -16,31 +79,31 @@ const Designing = () => {
     customPaddings
     id="designing">
 
-        <p className="body-2 text-n-3 mx-[6em] mb-[2rem]">
+        <p ref={backRef} className="body-2 text-n-3 mx-[6em] mb-[2rem]">
             <Link to="/services" className="inline-flex text-n-1 hover:text-color-1 transition">
-                 {/* <span className="text-xl leading-none ">←</span> */}
-                <Arrow />
+                 <span className="text-xl leading-none ">←</span>
                 Back to Services
             </Link>
         </p>
       <div className="container lg:flex">
         <div >
-            <p className="body-2 my-2 px-2 pb-2 text-n-4">Visual Excellence</p>
-            <h2 className="max-w-[25rem] h2 mb-4 md:mb-8">
+            <p ref={tagRef} className="body-2 my-2 pb-2 text-n-4">Visual Excellence</p>
+            <h2 ref={titleRef} className="max-w-[25rem] h2 mb-4 md:mb-8">
                 Graphic Design
             </h2>
 
-            <p className="body-1 mb-[2rem] mt-[2rem]">
+            <p ref={textRef} className="body-1 mb-[2rem] mt-[2rem]">
                 We craft compelling visual identities that capture your brand essence and resonate with your audience. 
                 Every design tells a story.
             </p>
 
-            <Button white href="/contact">Get a Quote</Button>
+            <Button ref={buttonRef} white href="/contact">Get a Quote</Button>
         </div>
       </div>
-      {/* Our process */}
+      
       <div className="container relative z-2">
         <Heading
+          ref={title2Ref}
           className="mt-[5rem] md:max-w-md lg:max-w-2xl"
           title="Our process"
         />
@@ -48,6 +111,7 @@ const Designing = () => {
         <div className="flex flex-wrap gap-10 mb-10">
           {designdetails.map((item) => (
             <div
+              ref={addCardRef}
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
@@ -57,42 +121,11 @@ const Designing = () => {
               <div className="relative z-2 flex flex-col justify-center min-h-[22rem] p-[2.4rem] pointer-events-none">
                 
                 <div className="flex items-center mt-auto">
-                  {/* <img
-                    src={item.iconUrl}
-                    width={48}
-                    height={48}
-                    // alt={item.title}
-                  /> */}
                   <p className="font-code text-[1.5rem] font-bold text-n-1 mb-[1rem]">{item.id}</p>
-                  {/* <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    Explore more
-                  </p>
-                  <Arrow /> */}
                 </div>
-                <h4 className="h4 mb-5 ">{item.title}</h4>
-                <p className="body-2 mt-6 mb-6 text-n-3">{item.text}</p>
+                <h4 ref={addTitleRef} className="h4 mb-5 ">{item.title}</h4>
+                <p ref={addTextRef} className="body-2 mt-6 mb-6 text-n-3">{item.text}</p>
               </div>
-
-             {/* <GradientLight /> */}
-
-              {/* <div
-                className="absolute inset-0.5 bg-n-8"
-                style={{ clipPath: "url(#benefits)" }}
-              >
-                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
-                  {item.imageUrl && (
-                    <img
-                      src={item.imageUrl}
-                      width={380}
-                      height={362}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-              </div> */}
-
-              {/* <ClipPath /> */}
             </div>
           ))}
         </div>

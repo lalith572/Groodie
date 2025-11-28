@@ -1,7 +1,5 @@
-import React from "react";
 import Section from "./Section";
 import { socials } from "../constants";
-import { Gradient2 } from "./design/Services";
 import { Link } from "react-router-dom";
 
 const Footer = ({ className, href, onClick, children, px, white }) => {
@@ -15,7 +13,6 @@ const Footer = ({ className, href, onClick, children, px, white }) => {
           <span className="flex items-center justify-center">Made by team <Link to="/home" className={classes}>Groodie</Link></span>
           © {new Date().getFullYear()} Groodie. All rights reserved.
         </p>
-         <Gradient2 />
         <ul className="flex gap-5 flex-wrap">
           {socials.map((item) => (
             <Link
