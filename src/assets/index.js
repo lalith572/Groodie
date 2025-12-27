@@ -1,6 +1,6 @@
 import brainwave from "./brainwave.svg";
 import check from "./check.svg";
-import brainwaveSymbol from "./brainwave-symbol.svg";
+import groodieSymbol from "./favicon.png";
 import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
 import play from "./play.svg";
 import gradient from "./gradient.png";
@@ -22,7 +22,7 @@ import loading from "./loading.png";
 import background from "./background.jpg";
 
 import curve from "./hero/curve.png";
-import robot from "./hero/robot.jpg";
+import Groodie from "./benefits/get-groodified.png";
 import heroBackground from "./hero/hero-background.jpg";
 
 import curve1 from "./collaboration/curve-1.svg";
@@ -32,13 +32,14 @@ import figma from "./collaboration/figma.png";
 import framer from "./collaboration/framer.png";
 import notion from "./collaboration/notion.png";
 import photoshop from "./collaboration/photoshop.png";
-import protopie from "./collaboration/protopie.png";
+import protopie from "./collaboration/protopie.png";  
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
 
-import service1 from "./services/service-1.png";
-import service2 from "./services/service-2.png";
-import service3 from "./services/service-3.png";
+import service1 from "./services/web-design-2.png";
+import service2 from "./services/digital-marketing.png";
+import service3 from "./services/graphic-design.png";
+import service4 from "./services/pentesting.png";
 
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
@@ -67,7 +68,7 @@ import benefitIcon1 from "./benefits/icon-1.svg";
 import benefitIcon2 from "./benefits/icon-2.svg";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
-import benefitImage2 from "./benefits/image-2.png";
+import benefitImage2 from "./benefits/get-groodified.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -80,7 +81,7 @@ export {
   check,
   check2,
   loading1,
-  brainwaveSymbol,
+  groodieSymbol,
   brainwaveWhiteSymbol,
   play,
   gradient,
@@ -99,7 +100,7 @@ export {
   loading,
   background,
   curve,
-  robot,
+  Groodie,
   heroBackground,
   curve1,
   curve2,
@@ -114,6 +115,7 @@ export {
   service1,
   service2,
   service3,
+  service4,
   lines,
   stars,
   coins,

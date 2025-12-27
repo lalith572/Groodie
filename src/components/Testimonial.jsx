@@ -115,7 +115,7 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <Gradient />
+      {/* <Gradient /> */}
     </Section>
   );
 };

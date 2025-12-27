@@ -36,6 +36,10 @@ import {
   telegram,
   twitter,
   yourlogo,
+  service1,
+  service2,
+  service3,
+  service4,
 } from "../assets";
 
 
@@ -67,15 +71,16 @@ export const navigation = [
   },
   {
     id: "5",
+    title: "FAQ",
+    url: "/faq",
+  },
+  {
+    id: "6",
     title: "Contact Us",
     url: "/contact",
     onlyMobile: true,
   },
-  {
-    id: "6",
-    title: "FAQ",
-    url: "/faq",
-  },
+  
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -84,16 +89,62 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const groodieServices= [
+export const webServices= [
   "Custom web applications",
   "Responsive design",
   "API development"
 ];
 
-export const groodieServices2 = [
+export const digitalMarketingServices= [
+  "SEO & Content Marketing",
+  "Social Media Management",
+  "PPC Campaigns"
+];
+
+export const graphicDesigningServices= [
+  "User research & testing",
+  "Conversion funnel optimization",
+  "A/B testing"
+];
+
+export const pentestingServices = [
   "Web Application Testing",
   "Vulnerability Assessment",
   "Network Security Audits & Consulting",
+];
+
+export const servicesData = [
+  {
+    title: "Web Development",
+    description:
+      "Build powerful websites and applications with modern technologies.",
+    // image: service1,
+    list: webServices,
+    link: "/webdev",
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Boost your brand visibility with powerful digital strategies.",
+    // image: service2,
+    list: digitalMarketingServices,
+    link: "/digitalmarketing",
+  },
+  {
+    title: "Graphic Design",
+    description: "Elevate your brand with stunning visual designs.",
+    // image: service3,
+    list: graphicDesigningServices,
+    link: "/designing",
+  },
+  {
+    title: "Penetration Testing",
+    description:
+      "Secure your digital assets with expert security testing.",
+    // image: service4,
+    list: pentestingServices,
+    link: "/pentesting",
+  },
 ];
 
 export const groodieServicesIcons = [
